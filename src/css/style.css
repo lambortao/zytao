@@ -1,0 +1,80 @@
+.box .main section div.three-box, .box .main section div.three-box div p, .box .main section div.three-box div img {
+  transition: all 500ms ease; }
+
+.box .main section div.three-box {
+  border: 1px solid #eee; }
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .box .main {
+    width: 1200px;
+    text-align: center; }
+    .box .main header {
+      width: 100%; }
+      .box .main header h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 30px; }
+      .box .main header small {
+        display: block;
+        font-size: 0.7em;
+        margin-bottom: 20px;
+        color: #999; }
+    .box .main section {
+      width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; }
+      .box .main section div.three-box {
+        width: 200px;
+        height: 250px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9em;
+        color: #999; }
+        .box .main section div.three-box div {
+          width: 50px;
+          height: 50px;
+          position: relative; }
+          .box .main section div.three-box div p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            z-index: 3; }
+          .box .main section div.three-box div img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            z-index: 1;
+            opacity: 0;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+        .box .main section div.three-box:nth-child(2) {
+          margin: 0 30px; }
+        .box .main section div.three-box:hover {
+          -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+          border: 1px solid #a1afc9; }
+          .box .main section div.three-box:hover div p {
+            color: #a1afc9;
+            -webkit-transform: translateY(-50px);
+            transform: translateY(-50px); }
+          .box .main section div.three-box:hover div img {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
