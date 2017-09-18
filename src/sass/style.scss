@@ -1,27 +1,47 @@
 @charset "UTF-8";
 @import "fun";
 @import "media";
+@import "include-media";
 
 $yuanJiao: 5px;
-$fontColorHui: #999;
+$fontColor9: #999;
+$fontColor6: #666;
+$bgColor: #f4f4f4;
+
 %border{
-    border: 1px solid #eee;
+    border: 1px solid #bdc3c7;
 }
 
 .box{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    background: $bgColor;
     
     .main{
-        width: 1200px;
+        width: 100%;
+        min-height: calc(100vh - 20px);
         text-align: center;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 60px;
 
         header{
             width: 100%;
 
+            figure{
+                width:80px;
+                height:80px;
+                margin: 0 auto;
+                border-radius: 50%;
+                overflow: hidden;
+                background-size: 100% 100%;
+                background-position: center center;
+                background-image: url(../images/zytao/logo/1.png);
+            }
             h3{
                 font: {
                     size: 1.2em;
@@ -34,72 +54,130 @@ $fontColorHui: #999;
                 display: block;
                 font-size: 0.7em;
                 margin-bottom: 20px;
-                color: $fontColorHui;
+                color: $fontColor9;
             }
         }
 
-        section{
-            width: 960px;
+        nav{
+            width: 100%;
             margin: 0 auto;
-            display: flex;
-            justify-content: center;
 
-            div.three-box{
-                width: 200px;
-                height: 250px;
-                border-radius: $yuanJiao;
+            .three-box{
+                width: 40px;
+                margin: 0 auto;
                 cursor: pointer;
-                @extend %border;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 0.9em;
-                color: $fontColorHui;
-                @extend %ani;
 
-                div{
-                    width: 50px;
-                    height: 50px;
-                    position: relative;
-                    p{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        margin: 0;
-                        width: 100%;
-                        height: 50px;
-                        line-height: 50px;
-                        text-align: center;
-                        z-index: 3;
-                        @extend %ani;
-                    }
-                    img{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 50px;
-                        z-index: 1;
-                        opacity: 0;
-                        @include rotate(180deg);
-                        @extend %ani;
-                    }
-                }
                 &:nth-child(2){
-                    margin: 0 30px;
+                    margin: 10px auto;
                 }
-                &:hover{
-                    @include zhongz(-5px);
-                    border: 1px solid #a1afc9;
 
-                    div{
-                        p{
-                            color: #a1afc9;
-                            @include zhongz(-50px);
-                        }
-                        img{
-                            @include rotate(0deg);
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 2em;
+                    line-height: 2em;
+                    display: flex;
+                    justify-content: space-around;
+                    position: relative;
+                    text-decoration: none;
+                    color: $fontColor6;
+                    transition: all 200ms ease;
+
+                    p{
+                        margin: 0;
+                        @extend %ani;
+                    }
+
+                    &:after{
+                        content: '';
+                        display: block;
+                        height: 2px;
+                        background: #000;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        opacity: 0;
+                        @include hengz(20px);
+                        @extend %ani;
+                    }
+
+                    &:hover{
+                        color: #000;
+                        
+                        &:after{
+                            @include hengz(0);
+                            width: 100%;
                             opacity: 1;
                         }
+                    }
+                }
+            }
+            @include media("<tablet"){
+                
+            }
+        }
+    }
+    .footer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        height: 20px;
+        font-size: 0.7em;
+
+        p{
+            line-height: 20px;
+            color: $fontColor6;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+            color: $fontColor6;
+        }
+    }
+}
+
+.article-main{
+    width: 100%;
+
+    p,figure{
+        margin: 0;
+    }
+
+    header{
+        width: 100%;
+        height: 20vh;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .article-box{
+        width: 100%;
+
+        .article-list{
+            max-width: 1140px;
+            padding: 0 20px;
+            margin: 0 auto;
+
+            article{
+                width: 100%;
+                padding: 20px 0;
+                border-bottom: 1px solid #eee;
+                display: flex;
+                justify-content: space-between;
+
+                .info{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .readnum{
+                        p{
+                            display: inline-block;
+                        }
+                        margin-right: 30px;
                     }
                 }
             }
