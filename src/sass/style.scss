@@ -355,5 +355,17 @@ $bgColor: #f4f4f4;
             }
         }
     }
+
+    .demo-box{
+        width: 100%;
+        padding: 20px 0;
+
+        .demo-list{
+            width: 1140px;
+            padding: 0 20px;
+            min-height: calc(100vh - 20vh - 80px);
+
+        }
+    }
 }
 
