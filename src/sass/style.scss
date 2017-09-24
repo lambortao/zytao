@@ -7,6 +7,7 @@ $yuanJiao: 5px;
 $fontColor9: #999;
 $fontColor6: #666;
 $bgColor: #f4f4f4;
+$hoverColorBlue: rgb(52, 73, 94);
 
 %border{
     border: 1px solid #bdc3c7;
@@ -115,6 +116,43 @@ $bgColor: #f4f4f4;
             }
             @include media("<tablet"){
                 
+            }
+        }
+    }
+}
+
+.nav-box{
+    $navHeight: 40px;
+
+    max-width: 1140px;
+    height: $navHeight;
+    padding: 0 20px;
+    margin: 0px auto;
+
+    nav{
+        width: 100%;
+        height: $navHeight;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p{
+            height: $navHeight;
+            line-height: $navHeight;
+            padding: 0 10px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: $fontColor6;
+            border-bottom: 1px solid #fff;
+            @extend %ani;
+
+            &:hover{
+                color: $hoverColorBlue;
+                border-bottom: 1px solid $hoverColorBlue;
+            }
+            &.active{
+                color: $hoverColorBlue;
+                border-bottom: 1px solid $hoverColorBlue;
             }
         }
     }
@@ -355,17 +393,34 @@ $bgColor: #f4f4f4;
             }
         }
     }
+}
 
-    .demo-box{
-        width: 100%;
-        padding: 20px 0;
+.demo-box{
+    width: 100%;
+    padding: 20px 0;
 
-        .demo-list{
-            width: 1140px;
-            padding: 0 20px;
-            min-height: calc(100vh - 20vh - 80px);
+    .demo-list{
+        max-width: 1140px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-height: calc(100vh - 20vh - 80px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
 
+        section{
+            min-width: 530px;
+            height: 300px;
+            border: 1px solid #eee;
+            margin: 20px 0;
+            cursor: pointer;
+            @extend %ani;
+
+            &:hover{
+                border-radius: 3px;
+                border: 1px solid $hoverColorBlue;
+            }
         }
     }
 }
-
