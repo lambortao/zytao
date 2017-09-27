@@ -114,9 +114,6 @@ $hoverColorBlue: rgb(52, 73, 94);
                     }
                 }
             }
-            @include media("<tablet"){
-                
-            }
         }
     }
 }
@@ -414,13 +411,96 @@ $hoverColorBlue: rgb(52, 73, 94);
             height: 300px;
             border: 1px solid #eee;
             margin: 20px 0;
+            overflow: hidden;
             cursor: pointer;
             @extend %ani;
+            position: relative;
+
+            .bg{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: {
+                    size: cover;
+                    image: url(http://yuangou.brandsh.cn/uploads/images/1499070821zzm1oy.jpg);
+                    position: center center;
+                }
+                @extend %ani;
+            }
+
+            .name{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                background: rgba(0,0,0,0.3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @extend %ani;
+
+                p{
+                    height: 1.85em;
+                    line-height: 1.85em;
+                    position: relative;
+                    overflow: hidden;
+
+                    span{
+                        height: 1.85em;
+                        line-height: 1.85em;
+                        color: #fff;
+                        display: block;
+                        transition: transform 500ms cubic-bezier(.17,.67,.05,1.36);
+                        @include zhongz(30px);
+                    }
+                    
+                    i{
+                        content: '';
+                        position: absolute;
+                        width: 0%;
+                        height: 2px;
+                        background: #fff;
+                        bottom: 0;
+                        left: 0;
+                        opacity: 0;
+                        @extend %ani;
+                        @include hengz(50%);
+                    }
+                }
+            }
+            
 
             &:hover{
-                border-radius: 3px;
                 border: 1px solid $hoverColorBlue;
+
+                .bg{
+                    @include scale(1.05);
+                }
+                .name{
+                    background: rgba(0,0,0,0.7);
+
+                    p{
+                        span{
+                            @include delay(200ms);
+                            @include zhongz(0);
+                        }
+                        i{
+                            width: 100%;
+                            opacity: 1;
+                            @include hengz(0%);
+                        }
+                    }
+                }
             }
+        }
+
+        @include media("<=1100px"){
+            justify-content: center;
         }
     }
 }

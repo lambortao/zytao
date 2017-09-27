@@ -1,4 +1,4 @@
-.box .main nav .three-box a p, .box .main nav .three-box a:after, .nav-box nav p, .demo-box .demo-list section {
+.box .main nav .three-box a p, .box .main nav .three-box a:after, .nav-box nav p, .demo-box .demo-list section, .demo-box .demo-list section .bg, .demo-box .demo-list section .name, .demo-box .demo-list section .name p i {
   transition: all 500ms ease; }
 
 .box {
@@ -287,9 +287,70 @@
       height: 300px;
       border: 1px solid #eee;
       margin: 20px 0;
-      cursor: pointer; }
+      overflow: hidden;
+      cursor: pointer;
+      position: relative; }
+      .demo-box .demo-list section .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-size: cover;
+        background-image: url(http://yuangou.brandsh.cn/uploads/images/1499070821zzm1oy.jpg);
+        background-position: center center; }
+      .demo-box .demo-list section .name {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .demo-box .demo-list section .name p {
+          height: 1.85em;
+          line-height: 1.85em;
+          position: relative;
+          overflow: hidden; }
+          .demo-box .demo-list section .name p span {
+            height: 1.85em;
+            line-height: 1.85em;
+            color: #fff;
+            display: block;
+            transition: transform 500ms cubic-bezier(0.17, 0.67, 0.05, 1.36);
+            -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+          .demo-box .demo-list section .name p i {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            -webkit-transform: translateX(50%);
+            transform: translateX(50%); }
       .demo-box .demo-list section:hover {
-        border-radius: 3px;
         border: 1px solid #34495e; }
+        .demo-box .demo-list section:hover .bg {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05); }
+        .demo-box .demo-list section:hover .name {
+          background: rgba(0, 0, 0, 0.7); }
+          .demo-box .demo-list section:hover .name p span {
+            -webkit-transition-delay: 200ms;
+            transition-delay: 200ms;
+            -webkit-transform: translateY(0);
+            transform: translateY(0); }
+          .demo-box .demo-list section:hover .name p i {
+            width: 100%;
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%); }
 
 /*# sourceMappingURL=style.css.map */
