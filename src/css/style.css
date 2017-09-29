@@ -96,7 +96,8 @@
       margin-right: 20px;
       cursor: pointer;
       color: #666;
-      border-bottom: 1px solid #fff; }
+      border-bottom: 1px solid #fff;
+      text-align: center; }
       .nav-box nav p:hover {
         color: #34495e;
         border-bottom: 1px solid #34495e; }
@@ -352,5 +353,8 @@
             opacity: 1;
             -webkit-transform: translateX(0%);
             transform: translateX(0%); }
+    @media (max-width: 1100px) {
+      .demo-box .demo-list {
+        justify-content: center; } }
 
 /*# sourceMappingURL=style.css.map */
