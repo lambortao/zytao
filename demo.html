@@ -28,7 +28,7 @@
             </nav>
         </div>
         <div class="demo-list">
-            <section>
+            <section id="2">
                 <div class="bg"></div>
                 <div class="name">
                     <p>
@@ -82,10 +82,34 @@
         <a href="javascript:;">沪ICP备3434343434</a>
     </p>
 </footer>
+<div id="tc">
+    
+</div>
 <script src="./src/js/layer/layer.js"></script>
 <script>
 $(function(){
-    // 点击
+    // 点击出现demo的细节弹窗
+    $('.demo-list').on('click', 'section', function() {
+        // 首先应该获取到点击的demo，然后再通过ajax来获取具体的内容
+        // 然后生成html结构，最后弹出
+        // 关于demo结构，标题、预览地址、github、注释是必须项，如果是移动端demo则会根据预览地址自动生成相应的二维码
+        let title = '基于VUE的沟通平台';
+        let url = 'https://github.com/jobbole/';
+        let demoUrl = 'https://github.com/jobbole/';
+        let qrcode = 'http://www.liantu.com/meihua/resource/image/thumbnail/default.png';
+        let intro = '注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释注释';
+        let demoHtml = `<div class="demo-intro"><h3>${title}</h3><p><b>github：</b><a target="_black" href="${demoUrl}">${demoUrl}</a></p><p><b>预览：</b><a target="_black" href="${url}">${url}</a></p><p><img class="qrcode" src="${qrcode}" alt=""></p><p>${intro}</p></div>`;
+
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: true,
+            area: '600px',
+            shadeClose: true,
+            skin: 'yourclass',
+            content: demoHtml
+        });
+    });
 });
 </script>
 </body>

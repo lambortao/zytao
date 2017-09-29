@@ -357,4 +357,21 @@
       .demo-box .demo-list {
         justify-content: center; } }
 
+.demo-intro {
+  width: 600px;
+  padding: 30px;
+  background: #fff; }
+  .demo-intro h3 {
+    margin-bottom: 20px; }
+  .demo-intro p {
+    width: auto;
+    margin: 1.5em 0;
+    font-size: 0.9em; }
+  .demo-intro a {
+    color: #000;
+    font-size: 0.9em; }
+  .demo-intro .qrcode {
+    width: 150px;
+    height: 150px; }
+
 /*# sourceMappingURL=style.css.map */
