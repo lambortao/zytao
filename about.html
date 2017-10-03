@@ -19,27 +19,31 @@
     </header>
     <div class="about-box">
         <section>
-            <figure><img src="./src/images/zytao/logo/1.png" alt=""></figure>
+            <figure id="logo"></figure>
             <div class="about-me">
                 <h3>关于我</h3>
                 <div>
-                    <p>陶子阳 - LamborTao</p>
-                    <p>前端工程师（也算得上工程师？）</p>
-                    <p>中医黑，课余喜欢研究手机电脑和飞机，认为贵就是好，一言不合就喜欢怼</p>
-                    <p>联系邮箱：<a href="mailto:lambortao@hotmaill.com">lambortao@hotmaill.com</a></p>
-                    <p>新浪微博：<a target="_black" href="https://weibo.com/lambortao/">https://weibo.com/lambortao/</a></p>
-                    <p>最喜欢&nbsp;<a target="_black" href="https://liukanshan.zhihu.com/">刘看山</a> ，就是LOGO上那个谁看谁说是小猪佩奇的知乎吉祥物（其实是个北极狐）</p>
+                    <ul>
+                        <li>陶子阳 - LamborTao</li>
+                        <li>前端工程师（也算得上工程师？）</li>
+                        <li>中医黑，课余喜欢研究手机电脑和飞机，认为贵就是好，一言不合就喜欢怼</li>
+                        <li>联系邮箱：<a href="mailto:lambortao@foxmail.com">lambortao@foxmail.com</a></li>
+                        <li>新浪微博：<a target="_black" href="https://weibo.com/lambortao/">https://weibo.com/lambortao/</a></li>
+                        <li>最喜欢&nbsp;<a target="_black" href="https://liukanshan.zhihu.com/">刘看山</a> ，就是LOGO上那个谁看谁说是小猪佩奇的知乎吉祥物（其实是个北极狐）。</li>
+                    </ul>
                 </div>
             </div>
             <div class="about-site">
                 <h3>关于本站</h3>
                 <div>
-                    <p><b>文章</b>页面多数是一些关于生活的记录和吐槽</p>
-                    <p>本站专门为找轮子，抄轮子，造轮子而生</p>
-                    <p>在这个框架巨头三足鼎立的时刻建了这么一个这么传统的站点是不是太不合群了？</p>
-                    <p>如果你是专门来看效果或者了解能力的话请移步<a href="demo.html">DEMO</a>区域</p>
-                    <p>厌倦了在做项目的时候到处找插件，困难的找插件情有可原，毕竟项目也是要考虑时间成本的，但是很简单的功能和特效就没有必要去找了吧？所以建立这个站点的意图其实想的就是不想用任何的插件去完成想做的事情（虽然还没能完全的做到），但是我会向那一步迈进。</p>
-                    <p>本站前端在&nbsp;<a target="_black" href="https://github.com/lambortao/zytao">github</a>&nbsp;开源</p>
+                    <ul>
+                        <li>首页LOGO下面那段话是我用来代替朋友圈的（发一些不适合在朋友圈发的话）。</li>
+                        <li><b>文章</b>&nbsp;页面多数是一些关于生活的记录和吐槽，当然也有代码和其他一切我想写的东西。</li>
+                        <li>本来想基于VUE，但是后来脑子一抽又没做。</li>
+                        <li>如果你是专门来看代码或者了解能力的话请移步<a href="demo.html">DEMO</a>区域。</li>
+                        <li><b>初建目的</b>&nbsp;厌倦了在做项目的时候到处找插件，困难的找插件情有可原，毕竟项目也是要考虑时间成本的，但是很简单的功能和特效就没有必要去找了吧？所以建立这个站点的意图其实想的就是不想用任何的插件去完成想做的事情（虽然还没能完全的做到），但是我会向那一步迈进。</li>
+                        <li>本站前端在&nbsp;<a target="_black" href="https://github.com/lambortao/zytao">github</a>&nbsp;开源。</li>
+                    </ul>
                 </div>
             </div>
             <div class="about-firend">
@@ -55,8 +59,12 @@
                             <a target="_black" href="http://www.w3cplus.com/">点击直达</a>
                         </li>
                         <li>
-                            <p></p>
-                            <a target="_black" href="http://">点击直达</a>
+                            <p>刘看山，知乎吉祥物 - </p>
+                            <a target="_black" href="https://liukanshan.zhihu.com/">点击直达</a>
+                        </li>
+                        <li>
+                            <p>点个赞科技，一只猫开的淘宝店 - </p>
+                            <a target="_black" href="http://jjboom.com/">点击直达</a>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +79,22 @@
     </p>
 </footer>
 <script src="./src/js/layer/layer.js"></script>
-<script></script>
+<script>
+window.onload = function() {
+    (function(){
+        let logo = document.querySelector('#logo');
+        (function changeLogo(num) {
+            if(num == 13){
+                num = 1;
+            }
+            logo.style.backgroundImage = 'url(./src/images/zytao/logo/'+ num +'.png)';
+            num++;
+            setTimeout(function(){
+                changeLogo(num);
+            },2000);
+        })(1);
+    })();
+}
+</script>
 </body>
 </html>

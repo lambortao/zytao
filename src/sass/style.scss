@@ -543,10 +543,16 @@ $hoverColorBlue: rgb(52, 73, 94);
             margin: 30px auto;
             border-radius: 50%;
             overflow: hidden;
+            @extend %ani;
+            background: {
+                size: 100%;
+                position: center;
+            }
 
             img{
                 width: 100%;
                 height: 100%;
+                @extend %ani;
             }
         }
 
@@ -569,7 +575,10 @@ $hoverColorBlue: rgb(52, 73, 94);
                     background: #000;
                 }
             }
-            p{
+            ul{
+                padding-left: 20px;
+            }
+            p,li{
                 color: $fontColor6;
                 line-height: 2em;   
             }
@@ -579,9 +588,6 @@ $hoverColorBlue: rgb(52, 73, 94);
         }
 
         .about-firend{
-            ul{
-                padding-left: 20px;
-            }
             p{
                 display: inline-block;
             }

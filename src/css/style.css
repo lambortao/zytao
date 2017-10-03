@@ -1,4 +1,4 @@
-.box .main nav .three-box a p, .box .main nav .three-box a:after, .nav-box nav p, .demo-box .demo-list section, .demo-box .demo-list section .bg, .demo-box .demo-list section .name, .demo-box .demo-list section .name p i {
+.box .main nav .three-box a p, .box .main nav .three-box a:after, .nav-box nav p, .demo-box .demo-list section, .demo-box .demo-list section .bg, .demo-box .demo-list section .name, .demo-box .demo-list section .name p i, .about-box > section figure, .about-box > section figure img {
   transition: all 500ms ease; }
 
 .box {
@@ -385,7 +385,9 @@
       height: 180px;
       margin: 30px auto;
       border-radius: 50%;
-      overflow: hidden; }
+      overflow: hidden;
+      background-size: 100%;
+      background-position: center; }
       .about-box > section figure img {
         width: 100%;
         height: 100%; }
@@ -404,13 +406,13 @@
           bottom: 0;
           left: 0;
           background: #000; }
-      .about-box > section > div p {
+      .about-box > section > div ul {
+        padding-left: 20px; }
+      .about-box > section > div p, .about-box > section > div li {
         color: #666;
         line-height: 2em; }
       .about-box > section > div a {
         color: #34495e; }
-    .about-box > section .about-firend ul {
-      padding-left: 20px; }
     .about-box > section .about-firend p {
       display: inline-block; }
 
