@@ -374,4 +374,44 @@
     width: 150px;
     height: 150px; }
 
+.about-box {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0px auto; }
+  .about-box > section {
+    width: 100%; }
+    .about-box > section figure {
+      width: 180px;
+      height: 180px;
+      margin: 30px auto;
+      border-radius: 50%;
+      overflow: hidden; }
+      .about-box > section figure img {
+        width: 100%;
+        height: 100%; }
+    .about-box > section > div {
+      margin-bottom: 50px; }
+      .about-box > section > div h3 {
+        display: inline-block;
+        position: relative;
+        height: 1.5em;
+        line-height: 1.5em; }
+        .about-box > section > div h3:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: #000; }
+      .about-box > section > div p {
+        color: #666;
+        line-height: 2em; }
+      .about-box > section > div a {
+        color: #34495e; }
+    .about-box > section .about-firend ul {
+      padding-left: 20px; }
+    .about-box > section .about-firend p {
+      display: inline-block; }
+
 /*# sourceMappingURL=style.css.map */
