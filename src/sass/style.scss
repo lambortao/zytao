@@ -528,3 +528,69 @@ $hoverColorBlue: rgb(52, 73, 94);
         height: 150px;
     }
 }
+
+.about-box{
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0px auto;
+
+    > section{
+        width: 100%;
+
+        figure{
+            width: 180px;
+            height: 180px;
+            margin: 30px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            @extend %ani;
+            background: {
+                size: 100%;
+                position: center;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                @extend %ani;
+            }
+        }
+
+        > div{
+            margin-bottom: 50px;
+
+            h3{
+                display: inline-block;
+                position: relative;
+                height: 1.5em;
+                line-height: 1.5em;
+
+                &:after{
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: #000;
+                }
+            }
+            ul{
+                padding-left: 20px;
+            }
+            p,li{
+                color: $fontColor6;
+                line-height: 2em;   
+            }
+            a{
+                color: $hoverColorBlue;
+            }
+        }
+
+        .about-firend{
+            p{
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/css/normalize.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/jquery-3.2.1.min.js"></script>
+    <title>桃子 - 项目</title>
+</head>
+<body>
+<div class="article-main">
+    <header>
+        <div>
+            <figure class="bgImg"><a href="index.html"></a></figure>
+            <p>关于</p>
+        </div>
+    </header>
+    <div class="about-box">
+        <section>
+            <figure id="logo"></figure>
+            <div class="about-me">
+                <h3>关于我</h3>
+                <div>
+                    <ul>
+                        <li>陶子阳 - LamborTao</li>
+                        <li>前端工程师（也算得上工程师？）</li>
+                        <li>工作之外喜欢研究手机电脑和飞机，认为贵就是好，一言不合就喜欢怼</li>
+                        <li>联系邮箱：<a href="mailto:lambortao@foxmail.com">lambortao@foxmail.com</a></li>
+                        <li>新浪微博：<a target="_black" href="https://weibo.com/lambortao/">https://weibo.com/lambortao/</a></li>
+                        <li>最喜欢&nbsp;<a target="_black" href="https://liukanshan.zhihu.com/">刘看山</a> ，就是LOGO上那个被文案妹子说是小猪佩奇的知乎吉祥物（其实是个北极狐）。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-site">
+                <h3>关于本站</h3>
+                <div>
+                    <ul>
+                        <li><b>首页</b>&nbsp;-&nbsp;刘看山下面那段话是我吐槽用的，平时用来发一些不适合在朋友圈发的话。</li>
+                        <li><b>文章</b>&nbsp;-&nbsp;一般就是一些生活记录和工作学习上的知识和见解。其实我是想把上学时候的文字功底捡回来！哈哈！</li>
+                        <li><b>DEMO</b>&nbsp;-&nbsp;就是建这个站点的宗旨造轮子了；想多学(zhuan)点(dian)东(chao)西(piao)，所以盲目的买了很多书，但是一点也看不下去，甚至花了好久去把<a target="_black" href="https://gitee.com/zzytao/jso-o">《Javascript》面向对象编程指南</a>整体抄了一遍也没有感觉到实际的作用，苦思冥想后认为应该是代码量不够（虽然已经截止成文之日明面上已经有了两年的工作经验，但是自己到底在干什么自己心里还是应该有点数不是？骗别人不能骗自己啊），去抄别人的插件又感觉很无趣，所以就萌生了自己多写点效果和功能的想法，各式各样的，只要看到喜欢的，都会去弄一下，能尽量做到的就是每次都用不一样的写法和思路去解决问题，哪怕最后只是实现了几十个没什么用处的轮播，也应该对后期看书学习进阶有些帮助了吧。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-firend">
+                <div>
+                    <h3>友情链接</h3>
+                    <ul>
+                        <li>
+                            <p>贤心，本站用的最多的插件就是这位大神写的 - </p>
+                            <a target="_black" href="http://sentsin.com/">点击直达</a>
+                        </li>
+                        <li>
+                            <p>w3plus，CSS3启蒙 - </p>
+                            <a target="_black" href="http://www.w3cplus.com/">点击直达</a>
+                        </li>
+                        <li>
+                            <p>刘看山，知乎吉祥物 - </p>
+                            <a target="_black" href="https://liukanshan.zhihu.com/">点击直达</a>
+                        </li>
+                        <li>
+                            <p>点个赞科技，一只猫开的电脑装机店（还有一些生活用品） - </p>
+                            <a target="_black" href="http://jjboom.com/">点击直达</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<footer class="footer black">
+    <p class="copyright">&copy; 2017 桃子</p>
+    <p class="beian">
+        <a href="javascript:;">沪ICP备3434343434</a>
+    </p>
+</footer>
+<script src="./src/js/layer/layer.js"></script>
+<script>
+window.onload = function() {
+    (function(){
+        let logo = document.querySelector('#logo');
+        (function changeLogo(num) {
+            if(num == 13){
+                num = 1;
+            }
+            logo.style.backgroundImage = 'url(./src/images/zytao/logo/'+ num +'.png)';
+            num++;
+            setTimeout(function(){
+                changeLogo(num);
+            },2000);
+        })(1);
+    })();
+}
+</script>
+</body>
+</html>
