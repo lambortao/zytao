@@ -13,6 +13,15 @@ $hoverColorBlue: rgb(52, 73, 94);
     border: 1px solid #bdc3c7;
 }
 
+#particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .box{
     width: 100vw;
     height: 100vh;
@@ -29,6 +38,8 @@ $hoverColorBlue: rgb(52, 73, 94);
         align-content: center;
         flex-wrap: wrap;
         padding-bottom: 60px;
+        position: relative;
+        z-index: 2;
 
         header{
             width: 100%;
@@ -164,6 +175,8 @@ $hoverColorBlue: rgb(52, 73, 94);
     padding: 0 10px;
     height: 40px;
     font-size: 0.7em;
+    position: relative;
+    z-index: 2;
 
     p{
         line-height: 20px;

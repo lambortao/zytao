@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="./src/css/normalize.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <script src="./src/js/jquery-3.2.1.min.js"></script>
+    <script src="./src/js/particles.min.js"></script>
     <title>桃子</title>
 </head>
 <body>
 <div class="box">
+    <div id="particles-js"></div>
     <div class="main">
         <header>
             <figure class="bgImg"></figure>
@@ -47,7 +49,10 @@
 </div>
 <script>
 $(function(){
-    
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'src/js/package.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
 });
 </script>
 </body>
